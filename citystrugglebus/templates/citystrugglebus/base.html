@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<!doctype html>
+<html id="push-dashboard" lang="en-US" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Push Dashboard</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css">
+        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    </head>
+    <body>
+      <div data-sticky-container>
+        <div class="top-bar" data-sticky>
+            <div class="row">
+                <div class="top-bar-title">
+                    <a href="/"><img src="{% static "img/struggle_bus.gif" %}" height="38" width="38"> <strong>City Struggle Bus</strong></a>
+                </div>
+            </div>
+        </div>
+        <main class="row">
+
+            {% block content %}{% endblock %}
+
+        </main>
+        <footer>
+            <div class="row">
+                <div class="top-bar-right">
+                    <a href="https://github.com/codefortulsa/city-struggle-bus" target="_blank">Source on GitHub</a> | <a href="https://github.com/codefortulsa/city-struggle-bus/issues" target="_blank">Issues</a>
+                </div>
+            </div>
+        </footer>
+      </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.js"></script>
+    {% block post_script %}{% endblock %}
+</html>
