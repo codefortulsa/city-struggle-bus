@@ -1,4 +1,15 @@
 {% extends "citystrugglebus/base.html" %}
+{% load staticfiles %}
 
 {% block content %}
+    <div style="text-align: center;">
+        <img src="{% static "img/struggle_bus.gif" %}">
+        <form>
+            <label for="issue">What issue are you considering?</label>
+            <input type="text">
+            <label for"city">What cities do you think are doing well on it?</label>
+            <input type="text">
+            <a class="large button" href="#">Search</a>
+        </form>
+    </div>
 {% endblock %}
