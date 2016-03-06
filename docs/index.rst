@@ -33,3 +33,13 @@ Resources
 :Issues:        https://github.com/codefortulsa/city-struggle-bus/issues
 :IRC:           irc://irc.mozilla.org/mds
 :Servers:       https://city-struggle-bus.herokuapp.com (stage)
+
+
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   development
+   deployment
