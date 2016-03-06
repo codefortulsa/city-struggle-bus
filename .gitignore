@@ -1,3 +1,4 @@
+*.pyc
 citystrugglebus.sqlite3
 staticfiles
 html
