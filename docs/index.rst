@@ -24,9 +24,9 @@ Resources
    :alt: Travis-CI Build Status
 .. image:: https://coveralls.io/repos/codefortulsa/city-struggle-bus/badge.png
     :target: https://coveralls.io/r/codefortulsa/city-struggle-bus
-.. image:: https://requires.io/github/codefortulsa/city-struggle-bus/requirements.png?branch=master
-   :target: https://requires.io/github/codefortulsa/city-struggle-bus/requirements/?branch=master
-   :alt: Requirements Status
+.. image:: https://requires.io/github/codefortulsa/city-struggle-bus/requirements.svg?branch=master
+     :target: https://requires.io/github/codefortulsa/city-struggle-bus/requirements/?branch=master
+     :alt: Requirements Status
 
 :Code:          https://github.com/codefortulsa/city-struggle-bus
 :Documentation: http://city-struggle-bus.readthedocs.org/
