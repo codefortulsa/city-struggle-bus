@@ -3,15 +3,15 @@ import scrapy
 class CitySpider(scrapy.Spider):
     name = "city"
     allowed_domains = [
-        "city.org",
+        "nextcity.org",
         "govtech.com"
     ] 
     start_urls = [
-        "http://www.city.org/",
+        "http://www.nextcity.org/",
         "http://www.govtech.com/"
     ]
 
     def parse(self, response):
-        filename = response.url.split("/")[-2] + '.html'
-        with open(filename, 'wb') as f:
-            f.write(response.body)
+        for href in response.css("a::attr('href')"):
+            url = response.urljoin(href.extract())
+            yield scrapy.Request(url, callback=self.parse)
