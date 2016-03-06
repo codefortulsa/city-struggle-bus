@@ -96,7 +96,7 @@ What to work on
 
 We have `Issues`_.
 
-.. _Issues: https://github.com/codefortulsa/citystrugglebus/issues
+.. _Issues: https://github.com/codefortulsa/city-struggle-bus/issues
 
 .. _virtual environment: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 .. _virtualenvwrapper: https://pypi.python.org/pypi/virtualenvwrapper
