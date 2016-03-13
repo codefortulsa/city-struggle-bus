@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import logging
+
+from decouple import config
 
 # Scrapy settings for scrapy_city project
 #
@@ -61,9 +64,9 @@ NEWSPIDER_MODULE = 'scrapy_city.spiders'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'scrapy_city.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -83,3 +86,12 @@ NEWSPIDER_MODULE = 'scrapy_city.spiders'
 #HTTPCACHE_DIR='httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
 #HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+ELASTICSEARCH_SERVER = config('ELASTICSEARCH_SERVER', 'localhost')
+ELASTICSEARCH_PORT = config('ELASTICSEARCH_PORT', 9200)
+ELASTICSEARCH_USERNAME = config('ELASTICSEARCH_USERNAME', '')
+ELASTICSEARCH_PASSWORD = config('ELASTICSEARCH_PASSWORD', '')
+ELASTICSEARCH_INDEX = config('ELASTICSEARCH_INDEX', 'scrapy')
+ELASTICSEARCH_TYPE = config('ELASTICSEARCH_TYPE', 'items')
+ELASTICSEARCH_UNIQ_KEY = config('ELASTICSEARCH_UNIQ_KEY', 'url')
+ELASTICSEARCH_LOG_LEVEL = config('ELASTICSEARCH_LOG_LEVEL', logging.ERROR)
