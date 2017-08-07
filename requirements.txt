@@ -1,6 +1,6 @@
 Django==1.11.4
 dj-database-url==0.4.2
 gunicorn==19.7.1
-python-decouple==3.0
+python-decouple==3.1
 whitenoise==3.3.0
 scrapy==1.4.0
