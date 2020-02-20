@@ -1,4 +1,4 @@
-Django==1.9.4
+Django==1.11.28
 dj-database-url==0.4.0
 gunicorn==19.4.5
 python-decouple==3.0
