@@ -5,7 +5,7 @@ Requirements
 ------------
 
 * `python`_ 2.7, `virtualenv`_, & `pip`_ for app server
-* `elasticsearch`_
+* `elasticsearch`_ for search index
 
 .. _python: https://www.python.org/
 .. _virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/
@@ -48,8 +48,29 @@ Install Locally
 .. _Create a superuser: https://docs.djangoproject.com/en/1.9/ref/django-admin/#django-admin-createsuperuser
 
 
-Run it
-------
+Run the spider
+--------------
+
+#. Start your `elasticsearch`_ server to store documents
+
+#. Source the ``.env`` file to set environment config vars (Can also use `autoenv`_)::
+
+    source .env
+
+#. Activate the `virtual environment`_ (Can also use `virtualenvwrapper`_)::
+
+    source env/bin/activate
+
+#. Go to the ``scrapy_city`` directory::
+    
+    cd scrapy_city/scrapy_city
+
+#. Run it::
+
+    scrapy runspider spiders/city_spider.py
+
+Run the site
+------------
 
 #. Source the ``.env`` file to set environment config vars (Can also use `autoenv`_)::
 
@@ -101,3 +122,4 @@ We have `Issues`_.
 .. _virtual environment: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 .. _virtualenvwrapper: https://pypi.python.org/pypi/virtualenvwrapper
 .. _autoenv: https://github.com/kennethreitz/autoenv
+.. _elasticsearch: https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html
