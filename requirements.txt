@@ -3,4 +3,4 @@ dj-database-url==0.4.0
 gunicorn==19.5.0
 python-decouple==3.0
 whitenoise==2.0.6
-scrapy==1.0.5
+scrapy==2.6.2
